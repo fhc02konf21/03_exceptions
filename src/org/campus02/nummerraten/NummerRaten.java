@@ -15,7 +15,11 @@ public class NummerRaten {
 
         while(input != randomNumber) {
             System.out.println("Bitte eine Zahl eingeben: ");
-            input = Integer.parseInt(scanner.next());
+            try {
+                input = Integer.parseInt(scanner.next());
+            } catch (NumberFormatException e) {
+                System.out.println("Es wurde keine Zahl eingegeben!");
+            }
         }
         System.out.println("Super. Die Zahl wurde erraten");
     }
