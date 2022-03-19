@@ -19,6 +19,10 @@ public class NummerRaten {
                 input = Integer.parseInt(scanner.next());
             } catch (NumberFormatException e) {
                 System.out.println("Es wurde keine Zahl eingegeben!");
+            } finally {
+                if (input != randomNumber) {
+                    System.out.println("Rate weiter");
+                }
             }
         }
         System.out.println("Super. Die Zahl wurde erraten");
